@@ -11,11 +11,12 @@
 }
 
 .home__main__section--productos{
-
+display: flex;
+flex-wrap: wrap;
 }
 
 .home__main__section__article{
-
+width: 100%;
 }
 
 .home__main__section__article--imagen{
@@ -53,8 +54,8 @@
     background-color: var(--colorGris);
     padding: 8px;
 }
-
-@media (min-width:426px) {
+/* 426 px para digital house */
+@media (min-width:768px) {
 
     .home__main__section--banner{
         display: block;
@@ -63,29 +64,19 @@
     .home__main__section--banner img{
         width: 100%;
     }
+    .home__main__section--productos{
+        justify-content: space-between;
+        }
 
     .home__main__section__article{
         width: 48%;
-        display: inline-block;
-        margin-right: 3.2%;
-    }
-
-    .home__main__section__article:nth-child(even){
-        margin-right: 0%;
     }
 }
 
 @media (min-width:1180px) {
     .home__main__section__article{
         width: 32%;
-        display: inline-block;
-        margin-right: 1.5%;
+        
     }
 
-    .home__main__section__article:nth-child(even){
-        margin-right: 1.5%;
-    }
-    .home__main__section__article:nth-child(3n){
-        margin-right: 0%;
-    }
 }
